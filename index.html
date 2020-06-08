@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <span class="edit btn btn-block btn-success mt-3 d-none">Edit Form</span>
+     
+    <form id="form">
+      <h1>Resume header</h1>
+      <hr>
+      <div class="form-group">
+        <label>First Name:<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="first-name-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name:<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="last-name-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Street Number:</label>
+        <input type="number" class="form-control" id="street-number-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Street Name:</label>
+        <input type="text" class="form-control" id="street-name-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>City:</label>
+        <input type="text" class="form-control" id="city-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Province:</label>
+        <input type="text" class="form-control" id="province-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Postal Code:</label>
+        <input type="text" class="form-control" id="postal-code-input" required>
+      </div>
+
+      <div class="form-group" id="phone-group">
+        <label>Phone:</label>
+        <input type="text" class="form-control phone" id="phone-input" required> <span id="plus-phone"
+          title="add phone">+</span>
+      </div>
+
+      <script>
+        
+      </script>
+
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" id="email-input" required>
+      </div>
+
+      <div class="form-group">
+        <label>Linked URL:</label>
+        <input type="text" class="form-control" id="linked-url-input">
+      </div>
+
+      <div class="form-group">
+        <label>Website URL:</label>
+        <input type="text" class="form-control" id="website-url-input">
+      </div>
+
+      <div class="form-group">
+        <label>Portfolio URL:</label>
+        <input type="text" class="form-control" id="portfolio-url-input">
+      </div>
+
+      <h1>Resume body</h1>
+      <hr>
+      <div class="form-group">
+        <label>Highlights:</label>
+        <textarea class="form-control" id="highlights" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Institution Name:</label>
+        <input type="text" class="form-control" id="institution-name">
+      </div>
+
+      <div class="form-group">
+        <label>Institution City:</label>
+        <input type="text" class="form-control" id="institution-city">
+      </div>
+
+      <div class="form-group">
+        <label>Institution Country:</label>
+        <input type="text" class="form-control" id="institution-country">
+      </div>
+
+      <div class="form-group">
+        <label>Certificate/Diploma/Degree achieved:</label>
+        <input type="text" class="form-control" id="institution-degree">
+      </div>
+
+      <div class="form-group">
+        <label>Start Date:</label>
+        <input type="number" class="form-control" id="start-date">
+      </div>
+
+      <div class="form-group">
+        <label>End Date:</label>
+        <input type="number" class="form-control" id="end-date">
+      </div>
+
+      <!-- Work Experience --------------------------------------------------->
+      <div class="form-group">
+        <label>Company Name:</label>
+        <input type="text" class="form-control" id="company-name">
+      </div>
+
+      <div class="form-group">
+        <label>Position:</label>
+        <input type="text" class="form-control" id="position">
+      </div>
+
+      <div class="form-group">
+        <label>Position Start Date:</label>
+        <input type="text" class="form-control" id="position-start-date">
+      </div>
+
+      <div class="form-group">
+        <label>Position End Date:</label>
+        <input type="text" class="form-control" id="position-end-date">
+      </div>
+
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea class="form-control" id="description" rows="3"></textarea>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+
+
+
+
+    <script>
+      
+    </script>
+
+
+
+    <main style="display: none;">
+      <button class="btn btn-info" onclick="window.print()" style="position: absolute; top: 150px;">Print <i
+          class="fa fa-print"></i> </button>
+
+      <div class="info">
+        <span id="first-name"></span>
+        <span id="last-name"></span><br>
+        <span id="street-number"></span>
+        <span id="street-name"></span>
+        <span id="city"></span>
+        <span id="province"></span>
+        <span id="postal-code"></span>
+        <div id="phone"></div>
+        <div id="email"></div>
+        <div id="linkedIn-url"></div>
+        <div id="website-url"></div>
+        <div id="portfolio-url"></div>
+
+      </div>
+      <hr>
+
+      <h1 class="titleRS">Highlights:</h1>
+      <p id="highlights-text" style="margin-left: 45px;"></p>
+      <br>
+
+      <h1 class="titleRS">Education:</h1>
+      <p class="education"><span id="degree"></span> <span id="country"></span> <span id="institution"></span> <span
+          id="start"></span> <span id="end"></span></p>
+      <!-- <p class="education">B.Sc. in Computer Software Engineering, Iran Azad University of Shabestar 2008</p> -->
+
+      <h1 class="titleRS ">IT Work Experience:</h1>
+
+      <div class="workExperience">
+        <span id="company-name"></span> <span id="position-name"></span> <span
+          id="position-start-date-span"></span><span id="position-end-date-span"></span>
+        <div id="description-span"></div>
+        <!-- <span class="wettl">Software developer | www.takrosystem.com 2011–2017 Takro System ltd</span> <br>
+      <p>Designing and development of accounting database and application.</p>
+      <p>Cooperate as a web developer and database designer of customer’s websites.</p>
+      <p>Work as an internal network maintainer and troubleshooter.</p>
+
+      Technologies: Asp.net, C#.net, SQL server, Visual studio.net, CSS, HTML, Bootstrap -->
+      </div><br><br>
+
+
+      <h1 class="titleRS">References:</h1>
+      <p class="language">Reference</p>
+    </main>
+  </div>
+
+ 
+  <script src="./app.js"></script>
+</body>
+
+</html>
